@@ -9457,7 +9457,7 @@ body {
 
 body {
   --bold-weight: var(--font-semibold);
-  --bold-color: var(--color-red);
+  --bold-color: var(--text-normal);
 }
 
 .cm-s-obsidian span.cm-quote.cm-strong {
