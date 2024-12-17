@@ -36,9 +36,13 @@ Enable in [style settings](https://github.com/mgmeyers/obsidian-style-settings) 
 
 Create your own UI style using [style settings](https://github.com/mgmeyers/obsidian-style-settings) plugin. Here are some presets:
 
-#### [Presets](https://github.com/Akifyss/obsidian-border/blob/main/presets.md)
+#### [Presets](./presets.md)
 
 (**Presets Usage**: Copy code from link, paste it into style settings and restart obsidian.)
+
+- [Arco](./presets/Arco.json)
+
+  ![screenshot](https://cdn.sa.net/2024/12/17/kfwGDxSMFWV846n.webp)
 
 + [Obsidian-default-light-alt](https://github.com/Akifyss/obsidian-border/blob/main/presets/Obsidian-default-light-alt.json) (Light Mode)
 ![screenshot](img/Obsidian-default-light-alt.png)
