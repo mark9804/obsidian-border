@@ -19,8 +19,7 @@
 ## Light Mode
 
 - [Arco](./presets/Arco.json)
-
-  ![screenshot](https://cdn.sa.net/2024/12/17/kfwGDxSMFWV846n.webp)
+  ![screenshot](https://cdn.sa.net/2024/12/17/zkDUIFmdWlTCVsL.webp)
 
 - [Obsidian-default-light](https://github.com/Akifyss/obsidian-border/blob/main/presets/Obsidian-default-light.json)
   ![screenshot](img/Obsidian-default-light.png)
