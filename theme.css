@@ -3692,8 +3692,13 @@ settings:
 
 */
 
+.sidebar-toggle-button.mod-right,
+.workspace-tab-header-container.workspace-tab-header-container {
+  padding-right: 0;
+}
+
 .workspace-tab-header-container {
-  gap: 0.25rem;
+  gap: 0.25rem !important;
 }
 
 .markdown-source-view.mod-cm6 .cm-content > *:not(.HyperMD-codeblock) {
