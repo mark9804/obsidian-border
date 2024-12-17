@@ -3701,13 +3701,6 @@ settings:
   gap: 0.25rem !important;
 }
 
-.markdown-source-view.mod-cm6
-  .cm-content
-  > *:not(.HyperMD-codeblock, .HyperMD-quote) {
-  margin-top: 0.125rem !important; /* 2 px */
-  margin-bottom: 0.125rem !important;
-}
-
 /*hide style setting option*/
 body:not(.border-focus-mode)
   .setting-item:is([data-id="line-active-bg"], [data-id="line-normal-opacity"]),
