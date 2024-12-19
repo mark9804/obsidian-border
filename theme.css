@@ -8185,6 +8185,10 @@ select,
 /*thumb*/
 
 .checkbox-container:after {
+  width: 16px;
+  height: 16px;
+  margin-top: 3px;
+  margin-left: 1px;
   background-color: var(--toggle-thumb-color);
   box-shadow: var(--toggle-thumb-shadow);
 }
