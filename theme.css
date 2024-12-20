@@ -4274,65 +4274,41 @@ body {
     var(--anim-motion-swing);
 }
 
-/*body:not(.is-phone, .extra-anim-remove) .graph-controls:not(.is-close),
-body:not(.is-phone, .extra-anim-remove) .popover:not(.svelte-1xg3ic1),
-body:not(.is-phone, .extra-anim-remove) .modal:not(:has(.checkbox-container)),
-body:not(.is-phone, .extra-anim-remove) .menu:not(.mk-style-menu, .svelte-1xg3ic1),
-body:not(.is-phone, .extra-anim-remove) .suggestion-container:not([data-popper-placement="bottom-start"]),*/
-body:not(.is-phone, .extra-anim-remove) .prompt,
-body:not(.is-mobile, .extra-anim-remove) .document-search-container {
-  -webkit-animation: scale-up var(--anim-duration-fast)
-    cubic-bezier(0.175, 0.885, 0.32, 1.095) both;
-  animation: scale-up var(--anim-duration-fast)
-    cubic-bezier(0.175, 0.885, 0.32, 1.095) both;
+body:not(.is-phone, .extra-anim-remove) {
+  .prompt,
+  .document-search-container {
+    animation: scale-up var(--anim-duration-fast)
+      cubic-bezier(0.175, 0.885, 0.32, 1.095) both;
+  }
+
+  .modal {
+    & :has(.checkbox-container),
+    .mod-settings,
+    .mod-community-modal {
+      animation: var(--anim-duration-fast) fadeIn both;
+    }
+  }
 }
 
 @media (prefers-reduced-motion) {
-  /*body:not(.is-phone, .extra-anim-remove) .graph-controls:not(.is-close),
-    body:not(.is-phone, .extra-anim-remove) .popover:not(.svelte-1xg3ic1),
-    body:not(.is-phone, .extra-anim-remove) .modal:not(:has(.checkbox-container)),
-    body:not(.is-phone, .extra-anim-remove) .menu:not(.mk-style-menu, .svelte-1xg3ic1),
-    body:not(.is-phone, .extra-anim-remove) .suggestion-container:not([data-popper-placement="bottom-start"]),*/
-  body:not(.is-phone, .extra-anim-remove) .prompt,
-  body:not(.is-mobile, .extra-anim-remove) .document-search-container {
-    -webkit-animation: unset;
-    animation: unset;
-  }
-}
-
-@-webkit-keyframes scale-up {
-  0% {
-    -webkit-transform: scale(0.75);
-    transform: scale(0.75);
-    opacity: 0;
-  }
-
-  100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    opacity: 1;
+  body:not(.is-phone, .extra-anim-remove) {
+    .prompt,
+    .document-search-container {
+      animation: unset;
+    }
   }
 }
 
 @keyframes scale-up {
   0% {
-    -webkit-transform: scale(0.75);
     transform: scale(0.75);
     opacity: 0;
   }
 
   100% {
-    -webkit-transform: scale(1);
     transform: scale(1);
     opacity: 1;
   }
-}
-
-body:not(.is-phone, .extra-anim-remove) .modal:has(.checkbox-container),
-body:not(.is-phone, .extra-anim-remove) .modal.mod-settings,
-body:not(.is-phone, .extra-anim-remove) .modal.mod-community-modal {
-  -webkit-animation: var(--anim-duration-fast) fadeIn both;
-  animation: var(--anim-duration-fast) fadeIn both;
 }
 
 /*----------workspace----------*/
