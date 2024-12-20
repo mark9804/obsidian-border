@@ -3710,6 +3710,28 @@ settings:
   gap: 0.25rem !important;
 }
 
+.HyperMD-header {
+  font-weight: 600;
+
+  .cm-header {
+    &.cm-header-1 {
+      font-size: 24px !important;
+    }
+
+    &.cm-header-2 {
+      font-size: 20px !important;
+    }
+
+    &.cm-header-3 {
+      font-size: 18px !important;
+    }
+
+    &.cm-header-4 {
+      font-size: 16px !important;
+    }
+  }
+}
+
 /*hide style setting option*/
 body:not(.border-focus-mode)
   .setting-item:is([data-id="line-active-bg"], [data-id="line-normal-opacity"]),
