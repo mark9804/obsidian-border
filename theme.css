@@ -4440,13 +4440,6 @@ body {
   --titlebar-background-focused: transparent;
 }
 
-.sidebar-toggle-button,
-.workspace-tabs.mod-top,
-body.is-focused .sidebar-toggle-button,
-body.is-focused .workspace-tabs.mod-top {
-  --tab-container-background: transparent;
-}
-
 body:not(.is-mobile) {
   .app-container,
   .workspace,
