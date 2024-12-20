@@ -3790,59 +3790,50 @@ settings:
   }
 }
 
-.accent-color-override-light.theme-light
-  .mod-settings
-  .vertical-tab-content-container
-  > .vertical-tab-content
+/* Base selector for settings container */
+.mod-settings .vertical-tab-content-container > .vertical-tab-content {
   > .setting-item:nth-child(2)
-  > .setting-item-control:has(> input[type="color"]),
-.accent-color-override-dark.theme-dark
-  .mod-settings
-  .vertical-tab-content-container
-  > .vertical-tab-content
-  > .setting-item:nth-child(2)
-  > .setting-item-control:has(> input[type="color"]) {
-  position: relative;
-  visibility: hidden;
+    > .setting-item-control:has(> input[type="color"]) {
+    /* Apply to both light and dark themes with accent override */
+    .accent-color-override-light.theme-light &,
+    .accent-color-override-dark.theme-dark & {
+      position: relative;
+      visibility: hidden;
+    }
+  }
 }
 
-.accent-color-override-light.theme-light
-  .mod-settings
-  .vertical-tab-content-container
-  > .vertical-tab-content
+/* Base selector for settings container */
+.mod-settings .vertical-tab-content-container > .vertical-tab-content {
   > .setting-item:nth-child(2)
-  > .setting-item-control:has(> input[type="color"])::before,
-.accent-color-override-dark.theme-dark
-  .mod-settings
-  .vertical-tab-content-container
-  > .vertical-tab-content
-  > .setting-item:nth-child(2)
-  > .setting-item-control:has(> input[type="color"])::before {
-  content: "Overridden by Style Settings";
-  font-family: var(--font-interface);
-  font-size: var(--font-ui-smaller);
-  position: absolute;
-  width: max-content;
-  right: 0px;
-  top: 50%;
-  transform: translateY(-50%);
-  visibility: visible;
-  pointer-events: none;
-}
+    > .setting-item-control:has(> input[type="color"]) {
+    /* Apply to both light and dark themes with accent override */
+    .accent-color-override-light.theme-light &,
+    .accent-color-override-dark.theme-dark & {
+      position: relative;
+      visibility: hidden;
 
-.accent-color-override-light.theme-light.is-mobile
-  .mod-settings
-  .vertical-tab-content-container
-  > .vertical-tab-content
-  > .setting-item:nth-child(2)
-  > .setting-item-control:has(> input[type="color"])::before,
-.accent-color-override-dark.theme-dark.is-mobile
-  .mod-settings
-  .vertical-tab-content-container
-  > .vertical-tab-content
-  > .setting-item:nth-child(2)
-  > .setting-item-control:has(> input[type="color"])::before {
-  width: auto;
+      &::before {
+        content: "Overridden by Style Settings";
+        font-family: var(--font-interface);
+        font-size: var(--font-ui-smaller);
+        position: absolute;
+        width: max-content;
+        right: 0px;
+        top: 50%;
+        transform: translateY(-50%);
+        visibility: visible;
+        pointer-events: none;
+      }
+
+      /* Mobile specific adjustments */
+      .is-mobile & {
+        &::before {
+          width: auto;
+        }
+      }
+    }
+  }
 }
 
 /* color */
@@ -4480,6 +4471,7 @@ body.is-focused .workspace-tabs.mod-top {
   --tab-container-background: transparent;
 }
 
+/* TODO: 这坨把 AI 干不会了，之后调整 */
 body:not(.is-mobile) .workspace-tabs:not(.mod-stacked) .workspace-leaf,
 body:not(.is-mobile) .workspace-tabs:not(.mod-stacked) .workspace-leaf-content,
 body:not(.is-mobile)
