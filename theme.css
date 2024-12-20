@@ -4471,48 +4471,61 @@ body.is-focused .workspace-tabs.mod-top {
   --tab-container-background: transparent;
 }
 
-/* TODO: 这坨把 AI 干不会了，之后调整 */
-body:not(.is-mobile) .workspace-tabs:not(.mod-stacked) .workspace-leaf,
-body:not(.is-mobile) .workspace-tabs:not(.mod-stacked) .workspace-leaf-content,
-body:not(.is-mobile)
-  .workspace-tabs:not(.mod-stacked)
-  .view-header:not(.animate),
-body:not(.is-mobile)
-  .workspace-tabs:not(.mod-stacked)
-  .view-content:not(
-    .vignette-radial,
-    .vignette-linear,
-    .animate,
-    .ptm-fullscreen-writing-focus-element
-  ),
-.mod-left-split .workspace-tab-header.has-active-menu,
-.mod-right-split .workspace-tab-header.has-active-menu,
-body:not(.is-mobile) .workspace-tab-header-container,
+body:not(.is-mobile) {
+  .app-container,
+  .workspace,
+  .view-header-title-container:not(.mod-at-start)::before,
+  .view-header-title-container:not(.mod-at-end)::after {
+    background-color: transparent;
+  }
+
+  .workspace-tabs:not(.mod-stacked) {
+    .workspace-leaf,
+    .workspace-leaf-content,
+    .view-header:not(.animate) {
+      background-color: transparent !important;
+    }
+
+    .view-content:not(
+        .vignette-radial,
+        .vignette-linear,
+        .animate,
+        .ptm-fullscreen-writing-focus-element
+      ) {
+      background-color: transparent !important;
+    }
+
+    .workspace-tab-header.is-active {
+      box-shadow: none;
+      overflow: visible;
+    }
+  }
+}
+
+.mod-left-split,
+.mod-right-split {
+  .workspace-tab-header.has-active-menu {
+    background-color: transparent !important;
+  }
+}
+
 .workspace > .workspace-split {
   background-color: transparent !important;
 }
 
-body:not(.is-mobile) .app-container,
-body:not(.is-mobile) .workspace,
-.workspace-ribbon.mod-left:before {
-  background-color: transparent;
-}
-
-.workspace-ribbon,
-.workspace-ribbon.mod-left.is-collapsed {
+.workspace-ribbon {
   border-right: none;
   background-color: transparent;
-}
 
-.workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active {
-  background-color: transparent !important;
-  box-shadow: none;
-  overflow: visible;
-}
+  & .mod-left {
+    & ::before {
+      background-color: transparent;
+    }
 
-body:not(.is-mobile) .view-header-title-container:not(.mod-at-start):before,
-body:not(.is-mobile) .view-header-title-container:not(.mod-at-end):after {
-  background: transparent;
+    & .is-collapsed {
+      border-right: none;
+    }
+  }
 }
 
 /* background - underlying */
