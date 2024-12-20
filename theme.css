@@ -3967,7 +3967,7 @@ body {
   --shadow-l: 0px 1.8px 7.3px rgba(0, 0, 0, 0.071),
     0px 6.3px 24.7px rgba(0, 0, 0, 0.112), 0px 30px 90px rgba(0, 0, 0, 0.2);
 
-  & .theme-light-background-adapt {
+  &.theme-light-background-adapt {
     --color-accent-3-light: hsla(
       var(--accent-h),
       calc(0.4 * var(--accent-s)),
@@ -4147,7 +4147,7 @@ body {
   --shadow-l: 0px 1.8px 7.3px rgba(0, 0, 0, 0.071),
     0px 6.3px 24.7px rgba(0, 0, 0, 0.112), 0px 30px 90px rgba(0, 0, 0, 0.2);
 
-  & .theme-dark-background-darker {
+  &.theme-dark-background-darker {
     --background-primary: hsl(
       var(--accent-h),
       calc(var(--accent-s) / 4),
@@ -4191,7 +4191,7 @@ body {
     );
   }
 
-  & .theme-dark-background-brighter {
+  &.theme-dark-background-brighter {
     --background-primary: hsl(
       var(--accent-h),
       calc(var(--accent-s) / 4.2),
@@ -4235,7 +4235,7 @@ body {
     );
   }
 
-  & .theme-dark-background-black {
+  &.theme-dark-background-black {
     --background-primary: black;
     --background-primary-alt: var(--color-base-00);
     --background-secondary: black;
@@ -4282,7 +4282,7 @@ body:not(.is-phone, .extra-anim-remove) {
   }
 
   .modal {
-    & :has(.checkbox-container),
+    &:has(.checkbox-container),
     .mod-settings,
     .mod-community-modal {
       animation: var(--anim-duration-fast) fadeIn both;
@@ -4471,9 +4471,16 @@ body:not(.is-mobile) {
       background-color: transparent !important;
     }
 
-    .workspace-tab-header.is-active {
-      box-shadow: none;
-      overflow: visible;
+    .workspace-tab-header {
+      &.is-active {
+        box-shadow: none;
+        overflow: visible;
+      }
+
+      &::before,
+      &::after {
+        display: none;
+      }
     }
   }
 }
@@ -4493,12 +4500,12 @@ body:not(.is-mobile) {
   border-right: none;
   background-color: transparent;
 
-  & .mod-left {
-    & ::before {
+  &.mod-left {
+    &::before {
       background-color: transparent;
     }
 
-    & .is-collapsed {
+    &.is-collapsed {
       border-right: none;
     }
   }
