@@ -5599,8 +5599,8 @@ body:not(.hider-sidebar-buttons)
 
 /* tab style */
 body {
-  --border-radius-activated-tab-header-light: 6px;
-  --border-radius-activated-tab-header-dark: 6px;
+  --border-radius-activated-tab-header-light: 4px;
+  --border-radius-activated-tab-header-dark: 4px;
   --color-activated-tab-header-light: var(--text-normal);
   --color-activated-tab-header-dark: var(--text-normal);
   --background-activated-tab-header-light: var(--background-primary);
