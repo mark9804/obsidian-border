@@ -4573,8 +4573,20 @@ body {
   }
 }
 
-/* foreground - underlying */
+.theme-light,
+.theme-dark {
+  &:not(.is-mobile) {
+    .workspace-tabs.mod-top {
+      .workspace-tab-header {
+        &.is-active {
+          font-weight: 550;
+        }
+      }
+    }
+  }
+}
 
+/* foreground - underlying */
 .theme-light:not(.is-mobile) .titlebar,
 .theme-light:not(.is-mobile) .status-bar,
 .theme-light:not(.is-mobile) .workspace-ribbon,
