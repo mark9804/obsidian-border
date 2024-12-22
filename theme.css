@@ -3708,6 +3708,12 @@ settings:
     var(--anim-motion-swing);
   --anim-out: var(--anim-duration-moderate) var(--anim-duration-slow)
     var(--anim-motion-swing);
+
+  /* foreground - underlying */
+  --on-border-light: var(--color-accent-3);
+  --on-border-dark: var(--color-accent-3);
+  --mix-blend-mode-on-border-light: normal;
+  --mix-blend-mode-on-border-dark: screen;
 }
 
 .sidebar-toggle-button.mod-right,
@@ -4562,12 +4568,6 @@ body {
 }
 
 /* foreground - underlying */
-body {
-  --on-border-light: var(--color-accent-3);
-  --on-border-dark: var(--color-accent-3);
-  --mix-blend-mode-on-border-light: normal;
-  --mix-blend-mode-on-border-dark: screen;
-}
 
 .theme-light:not(.is-mobile) .titlebar,
 .theme-light:not(.is-mobile) .status-bar,
