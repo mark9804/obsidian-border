@@ -4530,26 +4530,26 @@ body.theme-dark:not(.is-mobile):has(
   ) !important;
 }
 
-body.background-underlying-primary-light.theme-light,
-body.background-underlying-primary-dark.theme-dark {
+body.theme-light.background-underlying-primary-light,
+body.theme-dark.background-underlying-primary-dark {
   --background-underlying: var(--background-primary) !important;
 }
 
-body.background-underlying-secondary-light.theme-light,
-body.background-underlying-secondary-dark.theme-dark {
+body.theme-light.background-underlying-secondary-light,
+body.theme-dark.background-underlying-secondary-dark {
   --background-underlying: var(--background-secondary) !important;
 }
 
-body.background-underlying-default-light.theme-light,
-body.background-underlying-default-dark.theme-dark {
+body.theme-light.background-underlying-default-light,
+body.theme-dark.background-underlying-default-dark {
   --background-underlying: var(--background-tertiary) !important;
 }
 
-body.background-underlying-Color-light.theme-light {
+body.theme-light.background-underlying-Color-light {
   --background-underlying: var(--background-underlying-light) !important;
 }
 
-body.background-underlying-Color-dark.theme-dark {
+body.theme-dark.background-underlying-Color-dark {
   --background-underlying: var(--background-underlying-dark) !important;
 }
 
