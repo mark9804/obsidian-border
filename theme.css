@@ -3716,6 +3716,12 @@ settings:
   --mix-blend-mode-on-border-dark: screen;
 }
 
+.cm-inline-code {
+  &.cm-strong {
+    font-weight: bold !important;
+  }
+}
+
 .sidebar-toggle-button.mod-right,
 .workspace-tab-header-container.workspace-tab-header-container {
   padding-right: 0;
