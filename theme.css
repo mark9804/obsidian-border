@@ -4287,7 +4287,7 @@ body:not(.is-mobile, .extra-anim-remove) {
 }
 
 @media (prefers-reduced-motion) {
-  body:not(.is-phone, .extra-anim-remove) {
+  body:not(.is-mobile, .extra-anim-remove) {
     .prompt,
     .document-search-container {
       animation: unset;
@@ -4505,52 +4505,60 @@ body:not(.is-mobile) {
 }
 
 /* background - underlying */
+body {
+  &:not(.is-mobile) {
+    &:has(> .app-container) {
+      &.theme-light.background-underlying-CSS-light {
+        background: var(
+          --background-underlying-CSS-light,
+          --background-underlying
+        ) !important;
+        background-blend-mode: var(
+          --background-underlying-CSS-blend-mode-light
+        ) !important;
+      }
+      &.theme-dark.background-underlying-CSS-dark {
+        background: var(
+          --background-underlying-CSS-dark,
+          --background-underlying
+        ) !important;
+        background-blend-mode: var(
+          --background-underlying-CSS-blend-mode-dark
+        ) !important;
+      }
+    }
+  }
 
-body.theme-light:not(.is-mobile):has(
-    > .app-container
-  ).background-underlying-CSS-light {
-  background: var(
-    --background-underlying-CSS-light,
-    --background-underlying
-  ) !important;
-  background-blend-mode: var(
-    --background-underlying-CSS-blend-mode-light
-  ) !important;
-}
+  &.theme-light,
+  &.theme-dark {
+    &.background-underlying {
+      &-primary-light,
+      &-primary-dark {
+        --background-underlying: var(--background-primary) !important;
+      }
 
-body.theme-dark:not(.is-mobile):has(
-    > .app-container
-  ).background-underlying-CSS-dark {
-  background: var(
-    --background-underlying-CSS-dark,
-    --background-underlying
-  ) !important;
-  background-blend-mode: var(
-    --background-underlying-CSS-blend-mode-dark
-  ) !important;
-}
+      &-secondary-light,
+      &-secondary-dark {
+        --background-underlying: var(--background-secondary) !important;
+      }
 
-body.theme-light.background-underlying-primary-light,
-body.theme-dark.background-underlying-primary-dark {
-  --background-underlying: var(--background-primary) !important;
-}
+      &-default-light,
+      &-default-dark {
+        --background-underlying: var(--background-tertiary) !important;
+      }
 
-body.theme-light.background-underlying-secondary-light,
-body.theme-dark.background-underlying-secondary-dark {
-  --background-underlying: var(--background-secondary) !important;
-}
-
-body.theme-light.background-underlying-default-light,
-body.theme-dark.background-underlying-default-dark {
-  --background-underlying: var(--background-tertiary) !important;
-}
-
-body.theme-light.background-underlying-Color-light {
-  --background-underlying: var(--background-underlying-light) !important;
-}
-
-body.theme-dark.background-underlying-Color-dark {
-  --background-underlying: var(--background-underlying-dark) !important;
+      &-Color {
+        &-light {
+          --background-underlying: var(
+            --background-underlying-light
+          ) !important;
+        }
+        &-dark {
+          --background-underlying: var(--background-underlying-dark) !important;
+        }
+      }
+    }
+  }
 }
 
 /* foreground - underlying */
