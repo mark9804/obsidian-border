@@ -9297,6 +9297,7 @@ body:not(.ul-marker-restore) .markdown-source-view.mod-cm6 .list-bullet::after {
   width: var(--list-bullet-size-alt);
   height: var(--list-bullet-size-alt);
   background-color: transparent;
+  margin-right: 8px;
 }
 
 /* level 1 */
