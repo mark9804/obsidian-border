@@ -67,12 +67,17 @@
   "Editor@@heading-indicator-off": false,
   "Editor@@h1-divider-on": false,
   "Editor@@h2-divider-on": false,
-  "Editor@@text-align-justify": false,
+  "Editor@@text-align-justify": true,
   "Editor@@line-height-customize": 2,
   "Editor@@p-spacing-br": false,
   "Editor@@table-header-background-light": "#f2f3f5",
   "Editor@@table-width-select": "table-width-default",
   "Editor@@img-center-align": true,
   "Editor@@img-darken": true,
-  "Editor@@blockquote-background-light": "#f2f3f5"
+  "Editor@@blockquote-background-light": "#f2f3f5",
+  "Editor@@codeblock-style-select": "codeblock-style-customize",
+  "Editor@@checkbox-radius": "2px",
+  "Editor@@checkbox-color@@light": "#165DFF",
+  "Editor@@checkbox-color-hover@@light": "#4080FF",
+  "Editor@@checkbox-border-color-hover@@light": "#4080FF"
 }
