@@ -7957,13 +7957,27 @@ select,
 
 /*thumb*/
 
-.checkbox-container:after {
+.checkbox-container:not(.dataloom-switch)::after {
   width: 16px;
   height: 16px;
   margin-top: 3px;
   margin-left: 1px;
   background-color: var(--toggle-thumb-color);
   box-shadow: var(--toggle-thumb-shadow);
+}
+
+.dataloom-switch {
+  display: flex;
+  align-items: center;
+  max-height: 16px;
+  &::after {
+    width: 12px;
+    height: 12px;
+    margin-top: 0;
+  }
+  &.is-enabled::after {
+    margin-left: 1px;
+  }
 }
 
 .checkbox-container.is-enabled:after {
