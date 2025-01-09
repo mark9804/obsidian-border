@@ -10326,6 +10326,10 @@ body:not(.table-width-obsidian-default)
   margin-left: calc((var(--table-width) - 100%) / -2) !important;
 }
 
+.cm-html-embed table, .markdown-rendered table {
+  line-height: 1.5 !important;
+}
+
 table.dataview {
   thead,
   tbody,
