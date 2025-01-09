@@ -55,14 +55,15 @@
   "Components@@setting-item-title-icon-remove": false,
   "Appearance-light@@card-highlight-light": false,
   "Appearance-light@@workspace-divider-transparent-light": false,
-  "Editor@@line-hover-indicator": false,
-  "Editor@@editor-grid-background-pattren": false,
   "Appearance-light@@toggle-thumb-shadow-light": "\"\"",
   "Appearance-light@@toggle-track-shadow-light": "\"\"",
   "Appearance-light@@toggle-thumb-enabled-shadow-light": "\"\"",
   "Appearance-light@@input-shadow-light": "\"\"",
   "Appearance-light@@toggle-track-hovered-shadow-light": "\"\"",
   "Appearance-dark@@card-layout-open-dark": true,
+  "Appearance-light@@workspace-background-translucent@@light": "#F2F3F5",
+  "Editor@@line-hover-indicator": false,
+  "Editor@@editor-grid-background-pattren": false,
   "Editor@@collapse-icon-restore": false,
   "Editor@@heading-indicator-off": false,
   "Editor@@h1-divider-on": false,
@@ -79,5 +80,8 @@
   "Editor@@checkbox-radius": "2px",
   "Editor@@checkbox-color@@light": "#165DFF",
   "Editor@@checkbox-color-hover@@light": "#4080FF",
-  "Editor@@checkbox-border-color-hover@@light": "#4080FF"
+  "Editor@@checkbox-border-color-hover@@light": "#4080FF",
+  "Editor@@callout-border-opacity": 1,
+  "Editor@@callout-border-width": "1px",
+  "Editor@@callout-radius": "2px"
 }

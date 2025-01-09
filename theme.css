@@ -7966,6 +7966,8 @@ select,
     width: 14px;
     height: 14px;
     margin-top: 0;
+    margin-left: 1px;
+    margin-right: 1px;
     background-color: var(--toggle-thumb-color);
     box-shadow: var(--toggle-thumb-shadow);
   }
