@@ -3916,6 +3916,7 @@ body {
   --color-base-60: #707070;
   --color-base-70: #5a5a5a;
   --color-base-100: #222222;
+  --color-table-hover: #f0f1f2;
   --accent-h: var(--accent-light-h);
   --accent-s: var(--accent-light-s);
   --accent-l: var(--accent-light-l);
@@ -7957,26 +7958,30 @@ select,
 
 /*thumb*/
 
-.checkbox-container:not(.dataloom-switch)::after {
-  width: 16px;
-  height: 16px;
-  margin-top: 3px;
-  margin-left: 1px;
-  background-color: var(--toggle-thumb-color);
-  box-shadow: var(--toggle-thumb-shadow);
-}
-
-.dataloom-switch {
+.checkbox-container {
   display: flex;
   align-items: center;
-  max-height: 16px;
-  &::after {
-    width: 12px;
-    height: 12px;
+
+  &:not(.dataloom-switch)::after {
+    width: 14px;
+    height: 14px;
     margin-top: 0;
+    background-color: var(--toggle-thumb-color);
+    box-shadow: var(--toggle-thumb-shadow);
   }
-  &.is-enabled::after {
-    margin-left: 1px;
+
+  &.dataloom-switch {
+    display: flex;
+    align-items: center;
+    max-height: 16px;
+    &::after {
+      width: 12px;
+      height: 12px;
+      margin-top: 0;
+    }
+    &.is-enabled::after {
+      margin-left: 1px;
+    }
   }
 }
 
@@ -10317,6 +10322,38 @@ body:not(.table-width-obsidian-default)
   overflow: auto;
   width: var(--table-width) !important;
   margin-left: calc((var(--table-width) - 100%) / -2) !important;
+}
+
+table.dataview {
+  thead,
+  tbody,
+  tr {
+    border-color: var(--background-modifier-border);
+  }
+
+  th.table-view-th {
+    font-weight: 550;
+    font-size: 14px;
+    border-bottom: 1px solid var(--background-modifier-border);
+  }
+
+  tr {
+    transition: background-color var(--anim-duration-fast) ease-in-out;
+
+    &:hover {
+      background-color: var(--color-table-hover) !important;
+    }
+
+    td {
+      span {
+        white-space: nowrap;
+        font-size: 14px;
+      }
+    }
+  }
+  tr:nth-child(2n) {
+    background-color: var(--table-header-background-light);
+  }
 }
 
 /* ===== embeds ====== */

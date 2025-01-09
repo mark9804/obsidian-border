@@ -70,7 +70,7 @@
   "Editor@@text-align-justify": true,
   "Editor@@line-height-customize": 2,
   "Editor@@p-spacing-br": false,
-  "Editor@@table-header-background-light": "#f2f3f5",
+  "Editor@@table-header-background-light": "#f7f8fa",
   "Editor@@table-width-select": "table-width-default",
   "Editor@@img-center-align": true,
   "Editor@@img-darken": true,
