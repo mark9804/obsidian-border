@@ -10382,6 +10382,10 @@ body {
 
 /* ===== image ====== */
 
+img[data-resize-edge="true"] {
+  outline: 3px solid var(--interactive-accent) !important
+}
+
 /*  image center align */
 .img-center-align
   .print
