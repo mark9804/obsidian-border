@@ -8247,28 +8247,79 @@ h1,
   --h1-color: var(--h1-accent-color) !important;
 }
 
-body:not(.heading-indicator-off) .is-live-preview .HyperMD-header-1::before {
-  margin-right: 6px;
-  content: " ";
-  display: inline-block;
-  width: 3px;
-  height: calc(1.2em - 8px);
-  border-radius: var(--radius-m);
-  background-color: var(--h1-accent-color);
-  transform: translateY(4px);
+h1,
+.HyperMD-header-1 {
+  --color-heading-bg: var(--h1-accent-color);
 }
 
-body:not(.heading-indicator-off) .markdown-rendered > h1::before,
-body:not(.heading-indicator-off) .markdown-preview-sizer > div > h1::before {
+h2,
+.HyperMD-header-2 {
+  --color-heading-bg: var(--h2-accent-color);
+}
+
+h3,
+.HyperMD-header-3 {
+  --color-heading-bg: var(--h3-accent-color);
+}
+
+h4,
+.HyperMD-header-4 {
+  --color-heading-bg: var(--h4-accent-color);
+}
+
+h5,
+.HyperMD-header-5 {
+  --color-heading-bg: var(--h5-accent-color);
+}
+
+h6,
+.HyperMD-header-6 {
+  --color-heading-bg: var(--h6-accent-color);
+}
+
+body:not(.heading-indicator-off)
+  :is(.is-live-preview, .markdown-rendered, .markdown-preview-sizer)
+  :is(
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .HyperMD-header-1,
+    .HyperMD-header-2,
+    .HyperMD-header-3,
+    .HyperMD-header-4,
+    .HyperMD-header-5,
+    .HyperMD-header-6
+  )::before {
   margin-right: 6px;
   content: " ";
   display: inline-block;
   width: 3px;
-  height: calc(1.2em - 8px);
+  height: 100%;
   border-radius: var(--radius-m);
-  background-color: var(--h1-accent-color);
+  background-color: var(--color-heading-bg);
+  transform: scaleY(80%);
+}
+
+body:not(.heading-indicator-off)
+  .markdown-preview-sizer
+  :is(
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .HyperMD-header-1,
+    .HyperMD-header-2,
+    .HyperMD-header-3,
+    .HyperMD-header-4,
+    .HyperMD-header-5,
+    .HyperMD-header-6
+  )::before {
   position: absolute;
-  top: 4px;
   left: 0px;
 }
 
@@ -8366,31 +8417,6 @@ h2,
   --h2-color: var(--h2-accent-color) !important;
 }
 
-body:not(.heading-indicator-off) .is-live-preview .HyperMD-header-2::before {
-  margin-right: 6px;
-  content: " ";
-  display: inline-block;
-  width: 3px;
-  height: calc(1.2em - 8px);
-  border-radius: var(--radius-m);
-  background-color: var(--h2-accent-color);
-  transform: translateY(4px);
-}
-
-body:not(.heading-indicator-off) .markdown-rendered > h2::before,
-body:not(.heading-indicator-off) .markdown-preview-sizer > div > h2::before {
-  margin-right: 6px;
-  content: " ";
-  display: inline-block;
-  width: 3px;
-  height: calc(1.2em - 8px);
-  border-radius: var(--radius-m);
-  background-color: var(--h2-accent-color);
-  position: absolute;
-  top: 4px;
-  left: 0px;
-}
-
 body.h2-divider-on
   :is(
     .markdown-preview-sizer > div > h2,
@@ -8483,31 +8509,6 @@ h3,
 
 .h3-color-designated {
   --h3-color: var(--h3-accent-color) !important;
-}
-
-body:not(.heading-indicator-off) .is-live-preview .HyperMD-header-3::before {
-  margin-right: 6px;
-  content: " ";
-  display: inline-block;
-  width: 3px;
-  height: calc(1.3em - 8px);
-  border-radius: var(--radius-m);
-  background-color: var(--h3-accent-color);
-  transform: translateY(4px);
-}
-
-body:not(.heading-indicator-off) .markdown-rendered > h3::before,
-body:not(.heading-indicator-off) .markdown-preview-sizer > div > h3::before {
-  margin-right: 6px;
-  content: " ";
-  display: inline-block;
-  width: 3px;
-  height: calc(1.3em - 8px);
-  border-radius: var(--radius-m);
-  background-color: var(--h3-accent-color);
-  position: absolute;
-  top: 4px;
-  left: 0px;
 }
 
 body.h3-divider-on
@@ -8604,31 +8605,6 @@ h4,
   --h4-color: var(--h4-accent-color) !important;
 }
 
-body:not(.heading-indicator-off) .is-live-preview .HyperMD-header-4::before {
-  margin-right: 6px;
-  content: " ";
-  display: inline-block;
-  width: 3px;
-  height: calc(1.4em - 8px);
-  border-radius: var(--radius-m);
-  background-color: var(--h4-accent-color);
-  transform: translateY(4px);
-}
-
-body:not(.heading-indicator-off) .markdown-rendered > h4::before,
-body:not(.heading-indicator-off) .markdown-preview-sizer > div > h4::before {
-  margin-right: 6px;
-  content: " ";
-  display: inline-block;
-  width: 3px;
-  height: calc(1.4em - 8px);
-  border-radius: var(--radius-m);
-  background-color: var(--h4-accent-color);
-  position: absolute;
-  top: 4px;
-  left: 0px;
-}
-
 body.h4-divider-on
   :is(
     .markdown-rendered > h4,
@@ -8723,31 +8699,6 @@ h5,
   --h5-color: var(--h5-accent-color) !important;
 }
 
-body:not(.heading-indicator-off) .is-live-preview .HyperMD-header-5::before {
-  margin-right: 6px;
-  content: " ";
-  display: inline-block;
-  width: 3px;
-  height: calc(1.5em - 8px);
-  border-radius: var(--radius-m);
-  background-color: var(--h5-accent-color);
-  transform: translateY(4px);
-}
-
-body:not(.heading-indicator-off) .markdown-rendered > h5::before,
-body:not(.heading-indicator-off) .markdown-preview-sizer > div > h5::before {
-  margin-right: 6px;
-  content: " ";
-  display: inline-block;
-  width: 3px;
-  height: calc(1.5em - 8px);
-  border-radius: var(--radius-m);
-  background-color: var(--h5-accent-color);
-  position: absolute;
-  top: 4px;
-  left: 0px;
-}
-
 body.h5-divider-on
   :is(
     .markdown-rendered > h5,
@@ -8840,31 +8791,6 @@ h6,
 
 .h6-color-designated {
   --h6-color: var(--h6-accent-color) !important;
-}
-
-body:not(.heading-indicator-off) .is-live-preview .HyperMD-header-6::before {
-  margin-right: 6px;
-  content: " ";
-  display: inline-block;
-  width: 3px;
-  height: calc(1.5em - 8px);
-  border-radius: var(--radius-m);
-  background-color: var(--h6-accent-color);
-  transform: translateY(4px);
-}
-
-body:not(.heading-indicator-off) .markdown-rendered > h6::before,
-body:not(.heading-indicator-off) .markdown-preview-sizer > div > h6::before {
-  margin-right: 6px;
-  content: " ";
-  display: inline-block;
-  width: 3px;
-  height: calc(1.5em - 8px);
-  border-radius: var(--radius-m);
-  background-color: var(--h6-accent-color);
-  position: absolute;
-  top: 4px;
-  left: 0px;
 }
 
 body.h6-divider-on
@@ -10327,7 +10253,8 @@ body:not(.table-width-obsidian-default)
   margin-left: calc((var(--table-width) - 100%) / -2) !important;
 }
 
-.cm-html-embed table, .markdown-rendered table {
+.cm-html-embed table,
+.markdown-rendered table {
   line-height: 1.5 !important;
 }
 
@@ -10384,21 +10311,21 @@ body {
 /* ===== image ====== */
 
 .workspace-leaf-content[data-type="markdown"]
-    .markdown-source-view
-    .cm-content
-    > img,
-  .workspace-leaf-content[data-type="markdown"]
-    .view-content
-    .cm-content
-    .image-embed
-    img {
-    outline-offset: 2px;
-    outline: 1px solid var(--background-modifier-border-hover);
-    border-radius: calc(var(--radius-s) / 2);
-  }
+  .markdown-source-view
+  .cm-content
+  > img,
+.workspace-leaf-content[data-type="markdown"]
+  .view-content
+  .cm-content
+  .image-embed
+  img {
+  outline-offset: 2px;
+  outline: 1px solid var(--background-modifier-border-hover);
+  border-radius: calc(var(--radius-s) / 2);
+}
 
 img[data-resize-edge="true"] {
-  outline: 1px solid var(--interactive-accent) !important
+  outline: 1px solid var(--interactive-accent) !important;
 }
 
 /*  image center align */
