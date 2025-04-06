@@ -10383,8 +10383,22 @@ body {
 
 /* ===== image ====== */
 
+.workspace-leaf-content[data-type="markdown"]
+    .markdown-source-view
+    .cm-content
+    > img,
+  .workspace-leaf-content[data-type="markdown"]
+    .view-content
+    .cm-content
+    .image-embed
+    img {
+    outline-offset: 2px;
+    outline: 1px solid var(--background-modifier-border-hover);
+    border-radius: calc(var(--radius-s) / 2);
+  }
+
 img[data-resize-edge="true"] {
-  outline: 3px solid var(--interactive-accent) !important
+  outline: 1px solid var(--interactive-accent) !important
 }
 
 /*  image center align */
@@ -10430,8 +10444,9 @@ img[data-resize-edge="true"] {
     .image-embed
     img:hover {
     outline-offset: 2px;
-    outline: 2px solid var(--background-modifier-border-hover);
-    border-radius: var(--radius-s);
+    outline: 1px solid var(--color-accent);
+    border-radius: calc(var(--radius-s) / 2);
+    overflow: hidden;
   }
 }
 
